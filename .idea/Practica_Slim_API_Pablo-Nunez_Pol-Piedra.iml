@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra">
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/container-interop/container-interop" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/nikic/fast-route" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/pimple/pimple" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/slim/php-view" />
+      <excludeFolder url="file://$MODULE_DIR$/../Practica_Slim_API_Pablo-Nunez_Pol-Piedra/vendor/slim/slim" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
