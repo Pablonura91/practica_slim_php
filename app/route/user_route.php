@@ -7,10 +7,22 @@ $app->group('/user/', function () {
         return $res->getBody()
                    ->write('Hello Users');
     });
+
+
+    $this->get('root', function ($req, $res, $args) {
+
+        return $res
+            ->withHeader('Content-type', 'application/json')
+            ->getBody()
+            ->write(
+                '{"code": "200", "msg": "LSNote API v0.1"}'
+            );
+    });
     
     $this->get('getAll', function ($req, $res, $args) {
         $um = new UserModel();
-        
+        return $res->getBody()
+            ->write('Hello Users');
         return $res
            ->withHeader('Content-type', 'application/json')
            ->getBody()

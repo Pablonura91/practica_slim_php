@@ -7,15 +7,15 @@ use App\Lib\Response;
 class UserModel
 {
     private $db;
-    private $table = 'empleado';
+    private $table = 'Notes';
     private $response;
     
     public function __CONSTRUCT()
     {
-        $this->db = Database::StartUp();
+        return $this->db = Database::StartUp();
         $this->response = new Response();
     }
-    
+
     public function GetAll()
     {
 		try
