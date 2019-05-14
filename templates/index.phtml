@@ -19,7 +19,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-sm-2">
             <h1>Insert</h1>
@@ -113,17 +113,55 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div class="col-sm-2">
-            <h1>Delete</h1>
-            <form method="post" action="./user/delete">
-                <div class="form-group">
-                    <label for="id">ID</label>
-                    <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
-                           placeholder="Enter ID"
-                           required>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+        <div class="row col-sm-2">
+            <div class="col-sm-12">
+                <h1>Delete</h1>
+                <form method="post" action="./user/delete/1">
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
+                               placeholder="Enter ID"
+                               required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-sm-12">
+                <h1>Update ID and Tag</h1>
+                <form method="post" action="./user/addTagOnNote">
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
+                               placeholder="Enter ID"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tag">Tag</label>
+                        <input type="text" class="form-control" id="tag" name="tag" aria-describedby="tag"
+                               placeholder="Enter Tag"
+                               required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-sm-12">
+                <h1>Delete Tag from ID</h1>
+                <form method="post" action="./user/deleteTagOnNote">
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
+                               placeholder="Enter ID"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tag">Tag</label>
+                        <input type="text" class="form-control" id="tag" name="tag" aria-describedby="tag"
+                               placeholder="Enter Tag"
+                               required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

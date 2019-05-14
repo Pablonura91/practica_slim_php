@@ -63,7 +63,7 @@ $app->group('/user/', function () {
 
     });
 
-    $this->get('delete/{id}', function ($req, $res, $args) {
+    $this->post('delete/{id}', function ($req, $res, $args) {
         $um = new UserModel();
 
         $um->Delete($args['id']);
@@ -105,4 +105,71 @@ $app->group('/user/', function () {
         }
     });
 
+    $this->post('addTagOnNote', function ($req, $res) {
+        $um = new UserModel();
+        $note = $um->Get($req->getParsedBody()['id']);
+
+        $result = $um->addTagOnNote($req->getParsedBody()['tag'], $note->result);
+
+        if ($result != 409) {
+            $arr = array('code' => 200, 'msg' => 'Tag inserted!');
+            return $res
+                ->withJson($arr, 200);
+        } else {
+            $arr = array('code' => 400, 'msg' => 'Tag not inserted!');
+            return $res
+                ->withJson($arr, 400);
+        }
+    });
+
+    $this->post('deleteTagOnNote', function ($req, $res) {
+        $um = new UserModel();
+        $note = $um->Get($req->getParsedBody()['id']);
+
+        $result = $um->deleteTagOnNote($req->getParsedBody()['tag'], $note->result);
+
+        if ($result != 409) {
+            $arr = array('code' => 200, 'msg' => 'Tag deleted!');
+            return $res
+                ->withJson($arr, 200);
+        } else {
+            $arr = array('code' => 400, 'msg' => 'Tag not deleted!');
+            return $res
+                ->withJson($arr, 400);
+        }
+    });
+
+    $this->get('flipPrivate/{id}', function ($req, $res, $args) {
+        $um = new UserModel();
+        $note = $um->Get($args['id']);
+
+        $result = $um->flipPrivate( $note->result);
+
+        if ($result != 409) {
+            $arr = array('code' => 200, 'msg' => 'Private flipped!');
+            return $res
+                ->withJson($arr, 200);
+        } else {
+            $arr = array('code' => 400, 'msg' => 'Private not flipped!');
+            return $res
+                ->withJson($arr, 400);
+        }
+    });
+
+    $this->get('ordenar/{order}', function ($req, $res, $args) {
+        $um = new UserModel();
+        $note = $um->Get($args['id']);
+
+        $result = $um->flipPrivate( $note->result);
+
+        if ($result != 409) {
+            $arr = array('code' => 200, 'msg' => 'Private flipped!');
+            return $res
+                ->withJson($arr, 200);
+        } else {
+            $arr = array('code' => 400, 'msg' => 'Private not flipped!');
+            return $res
+                ->withJson($arr, 400);
+        }
+    });
 });
