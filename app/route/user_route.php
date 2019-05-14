@@ -63,7 +63,7 @@ $app->group('/user/', function () {
 
     });
 
-    $this->post('delete/{id}', function ($req, $res, $args) {
+    $this->get('delete/{id}', function ($req, $res, $args) {
         $um = new UserModel();
 
         $um->Delete($args['id']);

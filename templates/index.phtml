@@ -1,57 +1,131 @@
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Slim 3</title>
-        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<head>
+    <meta charset="utf-8"/>
+    <title>Slim 3</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-    <div class="col-sm-4">
-        <form method="post" action="./user/insert">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title" required>
-            </div>
-            <div class="form-group">
-                <label for="content">Content</label>
-                <input type="text" class="form-control" id="content" name="content" placeholder="Content">
-            </div>
-            <div class="form-group">
-                <label for="private">Private</label>
-                <input type="text" class="form-control" id="private" name="private" placeholder="True/False">
-            </div>
-            <div class="form-group">
-                <label for="tag1">Tag1</label>
-                <input type="text" class="form-control" id="tag1" name="tag1" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="tag2">Tag2</label>
-                <input type="text" class="form-control" id="tag2" name="tag2" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="tag3">Tag3</label>
-                <input type="text" class="form-control" id="tag3" name="tag3" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="tag4">Tag4</label>
-                <input type="text" class="form-control" id="tag4" name="tag4" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="book">Book</label>
-                <input type="text" class="form-control" id="book" name="book" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="user">User</label>
-                <input type="text" class="form-control" id="user" name="user" placeholder="">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h1>Insert</h1>
+            <form method="post" action="./user/insert">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
+                           placeholder="Enter title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" name="content" placeholder="Content">
+                </div>
+                <div class="form-group">
+                    <label for="private">Private</label>
+                    <input type="text" class="form-control" id="private" name="private" placeholder="True/False">
+                </div>
+                <div class="form-group">
+                    <label for="tag1">Tag1</label>
+                    <input type="text" class="form-control" id="tag1" name="tag1" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag2">Tag2</label>
+                    <input type="text" class="form-control" id="tag2" name="tag2" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag3">Tag3</label>
+                    <input type="text" class="form-control" id="tag3" name="tag3" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag4">Tag4</label>
+                    <input type="text" class="form-control" id="tag4" name="tag4" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="book">Book</label>
+                    <input type="text" class="form-control" id="book" name="book" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="user">User</label>
+                    <input type="text" class="form-control" id="user" name="user" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-2">
+            <h1>Update</h1>
+            <form method="post" action="./user/update">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
+                           placeholder="Enter ID"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
+                           placeholder="Enter title">
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" name="content" placeholder="Content">
+                </div>
+                <div class="form-group">
+                    <label for="private">Private</label>
+                    <input type="text" class="form-control" id="private" name="private" placeholder="True/False">
+                </div>
+                <div class="form-group">
+                    <label for="tag1">Tag1</label>
+                    <input type="text" class="form-control" id="tag1" name="tag1" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag2">Tag2</label>
+                    <input type="text" class="form-control" id="tag2" name="tag2" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag3">Tag3</label>
+                    <input type="text" class="form-control" id="tag3" name="tag3" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="tag4">Tag4</label>
+                    <input type="text" class="form-control" id="tag4" name="tag4" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="book">Book</label>
+                    <input type="text" class="form-control" id="book" name="book" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="user">User</label>
+                    <input type="text" class="form-control" id="user" name="user" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-2">
+            <h1>Delete</h1>
+            <form method="post" action="./user/delete">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" aria-describedby="id"
+                           placeholder="Enter ID"
+                           required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
-    </body>
+</div>
+</body>
 </html>
